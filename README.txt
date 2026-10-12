@@ -17,7 +17,7 @@ RUN LOCALLY
 
 BEFORE PUBLISHING
 - Verify your contact email in index.html. The current mailto uses
-  hello@shikharadhikari.com.np as a suggested address; change it if needed.
+  contact@shikharadhikari.com.np as a suggested address; change it if needed.
 - Add your actual LinkedIn profile URL in place of https://www.linkedin.com/.
 - Verify project repository URLs and descriptions.
 - Update any education or experience details that need exact dates/names.
