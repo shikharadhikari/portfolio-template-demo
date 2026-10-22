@@ -26,16 +26,21 @@ pipeline {
         }
 
         stage('Deploy Portfolio') {
-            steps {
-                sh '''
-                    set -eu
-                    rsync -av --delete \
-                        --exclude='.git/' \
-                        --exclude='Jenkinsfile' \
-                        ./ /var/www/website-one/
-                '''
-            }
-        }
+    steps {
+        sh '''
+            set -eu
+
+            rsync -rv --delete \
+                --no-perms \
+                --no-owner \
+                --no-group \
+                --omit-dir-times \
+                --exclude='.git/' \
+                --exclude='Jenkinsfile' \
+                ./ /var/www/website-one/
+        '''
+    }
+}
 
         stage('Verify') {
             steps {
